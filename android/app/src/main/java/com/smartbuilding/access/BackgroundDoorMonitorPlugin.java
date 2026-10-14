@@ -1,0 +1,10 @@
+package com.smartbuilding.access;
+import android.Manifest;import android.content.*;import android.content.pm.PackageManager;import android.net.Uri;import android.os.*;import android.provider.Settings;import androidx.core.content.ContextCompat;import com.getcapacitor.*;import com.getcapacitor.annotation.*;
+@CapacitorPlugin(name="BackgroundDoorMonitor",permissions={@Permission(alias="notifications",strings={Manifest.permission.POST_NOTIFICATIONS})})
+public class BackgroundDoorMonitorPlugin extends Plugin{
+ @PluginMethod public void requestPermissions(PluginCall c){if(Build.VERSION.SDK_INT>=33&&ContextCompat.checkSelfPermission(getContext(),Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED){requestPermissionForAlias("notifications",c,"done");return;}battery();c.resolve();}
+ @PermissionCallback private void done(PluginCall c){battery();c.resolve();}
+ @PluginMethod public void start(PluginCall c){Intent i=new Intent(getContext(),BackgroundDoorMonitorService.class);i.putExtra("supabase_url",c.getString("supabaseUrl",""));i.putExtra("supabase_anon",c.getString("supabaseAnonKey",""));i.putExtra("supabase_access",c.getString("accessToken",""));i.putExtra("supabase_refresh",c.getString("refreshToken",""));ContextCompat.startForegroundService(getContext(),i);c.resolve();}
+ @PluginMethod public void stop(PluginCall c){getContext().stopService(new Intent(getContext(),BackgroundDoorMonitorService.class));c.resolve();}
+ void battery(){if(Build.VERSION.SDK_INT>=23)try{PowerManager p=(PowerManager)getContext().getSystemService(Context.POWER_SERVICE);if(p!=null&&!p.isIgnoringBatteryOptimizations(getContext().getPackageName()))getActivity().startActivity(new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,Uri.parse("package:"+getContext().getPackageName())));}catch(Exception ignored){}}
+}

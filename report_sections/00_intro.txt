@@ -1,0 +1,9 @@
+LỜI MỞ ĐẦU
+
+Đề tài được thực hiện trong học phần Nhúng và IoT với trọng tâm là xây dựng một hệ thống kiểm soát truy cập có nút thiết bị thật ở biên mạng. Khác với một ứng dụng web chỉ mô phỏng trạng thái khóa, hệ thống phải giải quyết đồng thời bài toán phần cứng, firmware, kết nối không dây, giao thức IoT, dịch vụ dữ liệu, xác thực người dùng và phản hồi trạng thái. ESP8266 đảm nhiệm vai trò điều khiển tại hiện trường; keypad cung cấp phương thức thao tác cục bộ; relay và khóa điện thực hiện chấp hành; MQTT làm kênh truyền lệnh; Supabase cung cấp dữ liệu, xác thực và đồng bộ; Web và Android là các giao diện vận hành; WebRTC và Face AI tạo nhánh giám sát camera.
+
+Báo cáo được xây dựng theo hướng khóa luận kỹ thuật, tập trung vào quá trình phân tích, lựa chọn kiến trúc, thiết kế, triển khai, kiểm thử và đánh giá. Các sơ đồ luồng được chuẩn bị bằng Draw.io, đồng thời bản báo cáo đưa các sơ đồ vào những vị trí tương ứng để người đọc có thể đối chiếu giữa mô tả và hệ thống.
+
+Một nguyên tắc quan trọng của báo cáo là không đánh đồng trạng thái hiển thị với trạng thái thiết bị. Một nút mở cửa trên giao diện chỉ tạo yêu cầu; quyền được kiểm tra ở tầng dịch vụ; command được chuyển qua MQTT; ESP8266 mới là thành phần thực hiện thao tác relay. Tương tự, kết nối camera được tách thành signaling và media để có thể phân tích riêng các lỗi WebRTC.
+
+Báo cáo cũng ghi rõ các giới hạn của môi trường thử nghiệm. Những điểm chưa có phép thử thực tế đủ mạnh, chẳng hạn camera qua hai mạng Internet khác nhau hoặc độ an toàn điện của khóa khi triển khai thật, không được trình bày như kết quả đã được chứng minh. Cách trình bày này nhằm bảo đảm giá trị kỹ thuật và khả năng nghiệm thu của đề tài.

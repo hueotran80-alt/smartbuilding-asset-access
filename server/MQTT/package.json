@@ -1,0 +1,22 @@
+{
+  "name": "smart-building-mqtt-bridge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node bridge.js",
+    "start:daemon": "pm2 start bridge.js --name smart-building-mqtt-bridge --time --restart-delay 3000 --update-env",
+    "restart:daemon": "pm2 restart smart-building-mqtt-bridge --update-env",
+    "stop:daemon": "pm2 stop smart-building-mqtt-bridge",
+    "status:daemon": "pm2 status smart-building-mqtt-bridge",
+    "logs:daemon": "pm2 logs smart-building-mqtt-bridge"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "dotenv": "^16.4.5",
+    "mqtt": "^5.10.1"
+  },
+  "devDependencies": {
+    "pm2": "^7.0.4"
+  }
+}

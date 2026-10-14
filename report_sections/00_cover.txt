@@ -1,0 +1,19 @@
+TRƯỜNG ĐẠI HỌC TÀI NGUYÊN VÀ MÔI TRƯỜNG HÀ NỘI
+KHOA CÔNG NGHỆ THÔNG TIN
+
+BÁO CÁO BÀI TẬP LỚN
+MÔN HỌC: NHÚNG VÀ IoT
+
+XÂY DỰNG HỆ THỐNG QUẢN LÝ VÀ KIỂM SOÁT TRUY CẬP TÒA NHÀ THÔNG MINH TÍCH HỢP XÁC THỰC SINH TRẮC HỌC, GIÁM SÁT CAMERA VÀ ĐIỀU KHIỂN KHÓA
+
+Nhóm sinh viên thực hiện:
+1. Nguyễn Hữu Tùng
+2. Nguyễn Quang Phúc
+3. Nguyễn Đức Mạnh
+4. Trần Xuân Hùng
+5. Nguyễn Đình Đức
+
+Lớp: ĐH13C5
+Giảng viên: ThS. Nguyễn Văn Hách
+
+HÀ NỘI, 10/2026

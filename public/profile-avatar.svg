@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Ảnh đại diện">
+  <defs>
+    <linearGradient id="bg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eef5ff"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="person" x1="39" y1="30" x2="92" y2="111" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2b6fcb"/>
+      <stop offset="1" stop-color="#174a96"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <circle cx="64" cy="45" r="23" fill="url(#person)"/>
+  <path d="M25 112c3.5-23.5 18.5-36 39-36s35.5 12.5 39 36c.4 2.8-1.7 5-4.5 5h-69c-2.8 0-4.9-2.2-4.5-5Z" fill="url(#person)"/>
+  <path d="M52 44c2.5 3 7 5 12 5s9.5-2 12-5" fill="none" stroke="#d9e9ff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+</svg>

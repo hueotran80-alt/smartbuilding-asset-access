@@ -1,0 +1,44 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+coverage/
+.vite/
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+android/local.properties
+
+# Runtime configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Deployment/editor/OS local state
+.vercel/
+.vercel-*/
+.idea/
+.DS_Store
+*.log
+
+# Local backups and packaged binaries
+*.bak
+*.bak-*
+*.bak.*
+*.orig
+*.apk
+*.aab
+*.jks
+*.keystore
+key.properties
+
+# Local Supabase CLI state and temporary test/backup files
+supabase/.temp/
+**/*backup*
+*.encoding-backup
+WRITE_TEST.txt
+
+# Local credentials and data snapshots
+firmware/esp8266/main/main.ino
+supabase/seed.sql
